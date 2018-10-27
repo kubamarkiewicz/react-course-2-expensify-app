@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/Cellar/node/8.5.0/bin/node /usr/local/bin/yarn add enzyne-to-json
+  /usr/local/Cellar/node/8.5.0/bin/node /usr/local/bin/yarn add extract-text-webpak-plugin
 
 PATH: 
   /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin
@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/enzyne-to-json: Not found
+  Error: https://registry.yarnpkg.com/extract-text-webpak-plugin: Not found
       at Request.params.callback [as _callback] (/usr/local/lib/node_modules/yarn/lib/cli.js:64202:18)
       at Request.self.callback (/usr/local/lib/node_modules/yarn/lib/cli.js:137468:22)
       at Request.emit (events.js:182:13)
@@ -34,7 +34,8 @@ npm manifest:
     "license": "MIT",
     "scripts": {
       "serve": "live-server public/",
-      "build": "webpack",
+      "build:dev": "webpack",
+      "build:prod": "webpack -p --env production",
       "dev-server": "webpack-dev-server",
       "test": "jest --config=jest.config.json"
     },
@@ -48,6 +49,7 @@ npm manifest:
       "css-loader": "^1.0.0",
       "enzyme": "^3.7.0",
       "enzyme-adapter-react-16": "^1.6.0",
+      "enzyme-to-json": "^3.3.4",
       "jest": "^23.6.0",
       "live-server": "^1.2.0",
       "moment": "^2.22.2",
@@ -2247,6 +2249,12 @@ Lockfile:
       function.prototype.name "^1.1.0"
       object.assign "^4.1.0"
       prop-types "^15.6.2"
+  
+  enzyme-to-json@^3.3.4:
+    version "3.3.4"
+    resolved "https://registry.yarnpkg.com/enzyme-to-json/-/enzyme-to-json-3.3.4.tgz#67c6040e931182f183418af2eb9f4323258aa77f"
+    dependencies:
+      lodash "^4.17.4"
   
   enzyme@^3.7.0:
     version "3.7.0"
